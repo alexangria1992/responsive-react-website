@@ -17,6 +17,7 @@ const LogoText = styled.h1`
     margin-top: 6px;
     font-size: 40px;
     color: ${theme.primary};
+    font-weight: 900;
 `;
 export function Logo(props)
 {
