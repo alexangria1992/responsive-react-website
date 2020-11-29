@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BackgroundImg from "../../assets/pictures/company_team.jpg";
 import { Logo } from "../../components/logo/";
 import {Marginer} from "../../components/marginer";
+import {Button} from "../../components/button"
 
 const TopContainer = styled.div`
 width: 100%;
@@ -38,7 +39,8 @@ export function TopSection(props)
               <Marginer direction="vertical" margin="2em"/>
               <MotivationalText>Software Development</MotivationalText>
               <MotivationalText>From the best in the industry</MotivationalText>
-
+              <Marginer direction="vertical" margin="2em"/>
+              <Button>Start Your Project</Button>
            </BackgroundFilter>   
         </TopContainer>
 }
