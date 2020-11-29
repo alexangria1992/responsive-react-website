@@ -4,12 +4,14 @@ import BackgroundImg from "../../assets/pictures/company_team.jpg";
 import { Logo } from "../../components/logo/";
 import {Marginer} from "../../components/marginer";
 import {Button} from "../../components/button"
+import { DownArrow } from "../../components/downArrow";
 
 const TopContainer = styled.div`
 width: 100%;
 height: 100vh;
 padding: 0;
 background-image: url(${BackgroundImg});
+position: relative;
 
 `;
 
@@ -30,6 +32,14 @@ const MotivationalText = styled.h1`
     color:#fff;
 `;
 
+const DownArrowContainer = styled.div`
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+`;
+
 export function TopSection(props)
 {
     return <TopContainer>
@@ -41,6 +51,9 @@ export function TopSection(props)
               <MotivationalText>From the best in the industry</MotivationalText>
               <Marginer direction="vertical" margin="2em"/>
               <Button>Start Your Project</Button>
+              <DownArrowContainer>
+              <DownArrow/>
+              </DownArrowContainer>
            </BackgroundFilter>   
         </TopContainer>
 }
