@@ -3,15 +3,16 @@ import styled from "styled-components";
 import{theme} from "../../theme";
 
 const ButtonWrapper = styled.button`
-    padding: 7px 15px;
+    padding: ${({small}) => (small ?  "5px 9px" : "7px 15px")};
     border-radius: 5px;
     background-color: ${theme.primary};
     color: #fff;
     font-weight: bold;
-    font-size: 17px;
+    font-size: ${({small}) => (small ?  "12px": "16px")};
     outline: none;
     border: 2px solid transparent;
     transition: all 220ms ease-in-out;
+    
     cursor: pointer;
 
     &:hover{
