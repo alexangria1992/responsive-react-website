@@ -6,6 +6,7 @@ import {Marginer} from "../../components/marginer";
 import {Button} from "../../components/button"
 import { DownArrow } from "../../components/downArrow";
 import { Navbar } from "../../components/navbar";
+import { Element, scroller } from "react-scroll";
 
 const TopContainer = styled.div`
 width: 100%;
@@ -43,7 +44,12 @@ const DownArrowContainer = styled.div`
 
 export function TopSection(props)
 {
-    return <TopContainer>
+    const scrollToNextSection = () => {
+        scroller.scrollTo("servicesSection", {smooth: true, duration: 1500})
+    }
+    return (
+        <Element name="topSection"> 
+        <TopContainer>
             <BackgroundFilter>
               <Navbar/>
               <Marginer direction="vertical" margin="7em"/>
@@ -53,9 +59,11 @@ export function TopSection(props)
               <MotivationalText>From the best in the industry</MotivationalText>
               <Marginer direction="vertical" margin="2em"/>
               <Button>Start Your Project</Button>
-              <DownArrowContainer>
+              <DownArrowContainer onClick={scrollToNextSection}>
               <DownArrow/>
               </DownArrowContainer>
            </BackgroundFilter>   
         </TopContainer>
+        </Element>
+    )
 }
